@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+_argv = require('optimist').argv;
+printjson = require('../lib/printjson')
+printjson(_argv)
