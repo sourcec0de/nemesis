@@ -4,6 +4,29 @@
  * Module dependencies.
  */
 
-_argv = require('optimist').argv;
-printjson = require('../lib/printjson')
-printjson(_argv)
+var path = require('path');
+var argv = require('optimist').argv;
+var printjson = require('../lib/printjson');
+var templatePath = path.join(__dirname, '../templates')
+var colors = require('colors');
+var ncp = require('ncp').ncp;
+
+if(argv.debug) { 
+    printjson(argv);
+    console.log(__dirname);
+}
+
+
+// ncp.limit = 16;
+var command = argv._[0];
+var newAppPath = command === 'new' ? argv._[1] : null;
+var newAppPath = command === 'new' ? argv._[1] : null;
+
+// command is new && 
+if(newAppPath){
+    ncp(templatePath+'/new', newAppPath, function(err) {
+        if (err) return console.error("Error:".red,err);
+        console.log("Info:".green, 'successfully generated new app');
+        console.log("Info:".green, path.resolve(newAppPath));
+    });
+};
