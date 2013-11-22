@@ -1,6 +1,6 @@
 {
   "name": "nemesis",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "A Javascript Web Framework with opinions",
   "main": "index.js",
   "bin": {
@@ -30,7 +30,6 @@
     "async": "~0.2.9",
     "underscore": "~1.5.2",
     "underscore.string": "~2.3.3",
-    "express-load": "~1.1.7",
     "toobusy": "~0.2.4",
     "express-validator": "~1.0.0"
   },
