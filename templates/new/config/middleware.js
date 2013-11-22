@@ -4,6 +4,7 @@
 
 var path = require('path');
 var connectTimeout = require('connect-timeout');
+var expressValidator = require('express-validator');
 var middlewareDir = path.join(__dirname,'middleware');
 var middleware = nemesis.modules.scan(middlewareDir);
 
@@ -28,7 +29,7 @@ module.exports = function(app, express, config) {
 
     // Enable CSS Pre Processing
     // defaults to less
-    // middleware.cssPre(app,express,config);
+    middleware.cssPre(app,express,config);
 
 
     // Enable Session Support
@@ -37,6 +38,7 @@ module.exports = function(app, express, config) {
     // enable static resources
     // consider serving these from a CDN
     var staticPath = path.join(nemesis.root_path, 'public');
+    
     app.use(express.static(staticPath, {
         maxAge: 0, // Browser cache maxAge in milliseconds. defaults to 0, oneDay = 86400000
         hidden: false, // Allow transfer of hidden files. defaults to false
@@ -70,7 +72,7 @@ module.exports = function(app, express, config) {
     // https://github.com/senchalabs/connect/wiki/Connect-3.0
 
     // validation module
-    // app.use(expressValidator());
+    app.use(expressValidator());
 
     // Make your api more strict by disabling
     // the ability to overide a req method ?_method=POST

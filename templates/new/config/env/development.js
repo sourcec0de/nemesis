@@ -1,10 +1,14 @@
 /**
  * Development Config
  */
+var path = require('path');
+var viewsPath = path.join(nemesis.root_path, 'views');
+var lessSrcPath = path.join(nemesis.root_path,'/assets/src/less');
+var cssDest = path.join(nemesis.root_path,'/public/css');
 
 module.exports = {
     "port":3000,
-    
+    "views": viewsPath,
     // log is sent to logTransports
     // "log":{
     //     "level":"debug"
@@ -22,4 +26,14 @@ module.exports = {
      **/
 
     // "globalModels": false, // defaults to true
+
+
+    // css PreProcessor settings
+    "lessMiddleWare":{
+        "force": true,
+        "src":  lessSrcPath,
+        "dest": cssDest,
+        "prefix": '/css',
+        "debug": true
+    }
 }

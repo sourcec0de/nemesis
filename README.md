@@ -1,15 +1,19 @@
-# NEMESIS
+# NEMESIS - ALPHA
 
-API first development.
+Developer productivity framework. Don't spend time configuring
+your node server. Start a new project in seconds and start writing
+your business logic NOW!!!!
 
-Build Reactive / Realtime Web Applications.
+### Gloa - Build Reactive / Realtime Web Applications.
 
 - RESTful API JSON ....... and XML
-- Client Side:     Angular.js
-- Server Side:     Powered by Nemesis.io + Express.js
-- Template Engine: Jade
-- LESS for CSS:    Less
-
+- Server Side:     Powered by Nemesis.io + Express.js + Connect
+- Client Side:     Angular.js + Jquery.js + Bootstrap.js
+- Web Sockets:     Socket.io + PubNub (optional)
+- Template Engine: Jade (considering dust.js)
+- CSS Pre Proc:    Less
+- BYODB:           Database agnostic - Bring Your Own DB
+- Follow MVC
 
 ## Getting Started
 
@@ -26,3 +30,8 @@ nemesis new <newWebApp>
 cd <newWebApp>
 npm install
 ```
+
+# More concise instructions to come
+
+# ToDo:
+- [ ] Find a better way to possibly do dependency injection

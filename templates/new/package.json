@@ -1,5 +1,6 @@
 {
   "name": "newNemesisApp",
+  "private": true,
   "version": "0.0.0",
   "description": "",
   "main": "app.js",
@@ -9,9 +10,11 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "nemesis": "0.0.7",
+    "nemesis": "~0.1.0",
     "optimist": "~0.6.0",
     "winston": "~0.7.2",
-    "connect-timeout": "0.0.1"
+    "connect-timeout": "0.0.1",
+    "express-validator": "~1.0.0",
+    "less-middleware": "~0.1.14"
   }
 }

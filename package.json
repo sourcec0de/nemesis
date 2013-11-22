@@ -1,7 +1,7 @@
 {
   "name": "nemesis",
-  "version": "0.0.8",
-  "description": "A Javascript Web Framework with opinions",
+  "version": "0.1.0",
+  "description": "A FullStack Javascript Web Framework with opinions",
   "main": "index.js",
   "bin": {
     "nemesis": "./bin/nemesis"
@@ -21,17 +21,14 @@
   "dependencies": {
     "express": "~3.4.4",
     "jade": "~0.35.0",
-    "less-middleware": "~0.1.14",
     "colors": "~0.6.2",
     "request": "~2.27.0",
     "optimist": "~0.6.0",
     "winston": "~0.7.2",
-    "connect-timeout": "0.0.1",
     "async": "~0.2.9",
     "underscore": "~1.5.2",
     "underscore.string": "~2.3.3",
     "toobusy": "~0.2.4",
-    "express-validator": "~1.0.0",
     "ncp": "~0.4.2"
   },
   "devDependencies": {
